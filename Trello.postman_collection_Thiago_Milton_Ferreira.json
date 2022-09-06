@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "43c73f8b-f4d4-49c9-b9f6-1b9190b48d71",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12028704"
+	},
+	"item": [
+		{
+			"name": "A inserção de um cartão Trello",
+			"item": [
+				{
+					"name": "A inserção com CHAVE da API invalida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards?idList=6312a89693bc2902f6621248&key=86eff6bed92a7ce9c796fb51e4f81c401&token={{token}}&name=Test card",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "6312a89693bc2902f6621248"
+								},
+								{
+									"key": "key",
+									"value": "86eff6bed92a7ce9c796fb51e4f81c401"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "Test card"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A inserção com TOKEN da API invalida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards?idList=6312a89693bc2902f6621248&key={{key}}&token=bf6e1618b01c1f8cbf723ae84f7172a27553e36495b60b15be58ea4fe6d4c58f1&name=Test card",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "6312a89693bc2902f6621248"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "bf6e1618b01c1f8cbf723ae84f7172a27553e36495b60b15be58ea4fe6d4c58f1"
+								},
+								{
+									"key": "name",
+									"value": "Test card"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A inserção de um cartão dentro do Trello",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards?idList=6312a89693bc2902f6621248&key={{key}}&token={{token}}&name=Test card&desc=Descrição do card&pos=top&due=2022-09-13&start=2022-09-02",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "6312a89693bc2902f6621248"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "Test card"
+								},
+								{
+									"key": "desc",
+									"value": "Descrição do card"
+								},
+								{
+									"key": "pos",
+									"value": "top",
+									"description": "A Posição do novo card adicionado (top ou bottom)"
+								},
+								{
+									"key": "due",
+									"value": "2022-09-13",
+									"description": "data de vencimento do card"
+								},
+								{
+									"key": "start",
+									"value": "2022-09-02",
+									"description": "Dada de inicio do cartao anterior a data atual (Card atrasado)"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A inserção de cartao com idList invalida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards?idList=6312a89693bc2902f66212481&key={{key}}&token={{token}}&name=Testa card",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "6312a89693bc2902f66212481"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "Testa card"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Atualizar um cartão Trello",
+			"item": [
+				{
+					"name": "Atualizar um cartão dentro do Trello",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards/{{Card Update}}?key={{key}}&token={{token}}&name=Update3",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{Card Update}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "Update3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar um cartão com idList invalida",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards/11ghgh11111?key={{key}}&token={{token}}&name=Update3",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards",
+								"11ghgh11111"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "Update3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "A exclusão desse cartão",
+			"item": [
+				{
+					"name": "A exclusão desse cartão",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards/{{Card Delete}}?key={{key}}&token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{Card Delete}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A exclusão desse cartão id invalido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards/12121125?key={{key}}&token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards",
+								"12121125"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "A autenticação de usuário Trello",
+			"item": [
+				{
+					"name": "A autenticação de usuário no Trello",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://trello.com/login?user=thiagomilton.f@gmail.com&password=123@4DDt",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "thiagomilton.f@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123@4DDt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A autenticação e-mail formato incorreto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://trello.com/login?user=thiagomilton.fgmailcom&password=senha",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "thiagomilton.fgmailcom"
+								},
+								{
+									"key": "password",
+									"value": "senha"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A autenticação senha fraca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://trello.com/login?user=thiagomilton.f@gmail.com&password=123456789",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "thiagomilton.f@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Card Update",
+			"value": "6312b67c5119a802db0633b3"
+		},
+		{
+			"key": "Card Delete",
+			"value": "6312acb348d1bf021a0bd000"
+		}
+	]
+}
